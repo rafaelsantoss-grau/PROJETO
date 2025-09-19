@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BumBet</title>
+  <link rel="stylesheet" href="../css/style (1).css" />
+  <link rel="stylesheet" href="../css/config.css" />
+  <link rel="stylesheet" href="../js/script.js" />
+  <link rel="stylesheet" href="../css/pesquisa.css" />
+   <link rel="stylesheet" href="../css/paginalat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+<h1>BumBet</h1>
+    <div id="cadastro" class="menu-direito">
+      
+
+      <!-- Ícone de presente (sem ação por enquanto) -->
+      <span class="icon" style="display: inline-flex; align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5479 0.149241C12.0668 -0.136313 11.4315 0.00048038 11.1291 0.454778L9.00025 3.65269L6.87143 0.454684C6.56901 0.000379469 5.9338 -0.136427 5.45266 0.149119C4.97151 0.434664 4.82662 1.03443 5.12903 1.48873L6.78492 3.97628H2C0.89543 3.97628 0 4.87304 0 5.97924V7.98221C0 8.72359 0.402199 9.37089 1 9.71721V9.98517V16.9956C1 18.6549 2.34314 20 4 20H14C15.6569 20 17 18.6549 17 16.9956V9.98517V9.71721C17.5978 9.37089 18 8.72359 18 7.98221V5.97924C18 4.87304 17.1046 3.97628 16 3.97628H11.2156L12.8715 1.48886C13.1739 1.03457 13.029 0.434796 12.5479 0.149241ZM2 7.98221H8V5.97924H2V7.98221ZM10 5.97924V7.98221H16V5.97924H10ZM8 9.98517H3V16.9956C3 17.5487 3.44772 17.997 4 17.997H8V9.98517ZM10 17.997V9.98517H15V16.9956C15 17.5487 14.5523 17.997 14 17.997H10Z"></path>
+        </svg>
+      </span>
+
+      <!-- Ícone de busca (sem ação por enquanto) -->
+       <span id="openModalBtn" class="btn" style="cursor: pointer;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+    <path d="M10 2a8 8 0 015.293 13.707l4.147 4.147-1.414 1.414-4.147-4.147A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/>
+  </svg>
+</span>
+
+      <!-- Ícone de engrenagem que abre o modal -->
+      <span onclick="openModal()" style="cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+          <path d="M19.14 12.94a7.97 7.97 0 000-1.88l2.03-1.58a.5.5 0 00.12-.63l-1.92-3.32a.5.5 0 00-.6-.22l-2.39.96a8.06 8.06 0 00-1.6-.93l-.36-2.54a.5.5 0 00-.5-.44h-3.84a.5.5 0 00-.5.44l-.36 2.54a8.06 8.06 0 00-1.6.93l-2.39-.96a.5.5 0 00-.6.22l-1.92 3.32a.5.5 0 00.12.63l2.03 1.58a7.97 7.97 0 000 1.88l-2.03 1.58a.5.5 0 00-.12.63l1.92 3.32a.5.5 0 00.6.22l2.39-.96a8.06 8.06 0 001.6.93l.36 2.54a.5.5 0 00.5.44h3.84a.5.5 0 00.5-.44l.36-2.54a8.06 8.06 0 001.6-.93l2.39.96a.5.5 0 00.6-.22l1.92-3.32a.5.5 0 00-.12-.63l-2.03-1.58zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
+        </svg>
+      </span>
+
+      <!-- Links de login -->
+      <a href="../html/registrar.html" class="registrar">Registrar</a>
+      <a href="../html/login.html" class="entrar">Entrar</a>
+    </div>
+  </header>
+
+  <div class="Jogos">
+    <div class="lista-jogos">
+     
+    </div>
+  </div>
+
+<!-- estilo lateral-->
+
+<div class="container">
+    <aside class="sidebar">
+      <ul>
+        <li><i class="fa-solid fa-ticket"></i> Próximos jogos</li>
+        <li><i class="fa-solid fa-trophy"></i> Vencedores da Competição</li>
+        <li><i class="fa-solid fa-star"></i> Especiais</li>
+        <li><i class="fa-solid fa-coins"></i> Apostas por Odds</li>
+        <li><i class="fa-solid fa-flag-checkered"></i> Missões</li>
+        <li><i class="fa-brands fa-android"></i> Android</li>
+        <li><i class="fa-solid fa-gamepad"></i> Virtuais</li>
+        <li><i class="fa-solid fa-list-ol"></i> Bolão</li>
+      </ul>
+
+      <h3>COMPETIÇÕES FAVORITAS</h3>
+      <ul class="favorites">
+        <li>Brasileirão - Série A</li>
+        <li>Copa Libertadores</li>
+        <li>Copa Sul-americana</li>
+      </ul>
+
+      <h3>ESPORTES</h3>
+      <ul class="favorites">
+         <li>
+    <!-- Futebol -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <polygon points="10,5 13,7 12,11 8,11 7,7" />
+      <line x1="10" y1="5" x2="10" y2="1" />
+      <line x1="7" y1="7" x2="3" y2="6" />
+      <line x1="13" y1="7" x2="17" y2="6" />
+      <line x1="8" y1="11" x2="6" y2="15" />
+      <line x1="12" y1="11" x2="14" y2="15" />
+    </svg>
+    Futebol
+  </li>
+        
+  <li>
+    <!-- Basquete -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M1 10h18M10 1c3 3 3 15 0 18M10 1c-3 3-3 15 0 18"/>
+    </svg>
+    Basquete
+  </li>
+    <li>
+    <!-- Tênis -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M4 6c4-4 8-4 12 0M4 14c4 4 8 4 12 0"/>
+    </svg>
+    Tênis
+  </li>
+    <li>
+    <!-- Vôlei -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M3 7c4-3 10-3 14 0M3 13c4 3 10 3 14 0M7 3c3 4 3 10 0 14M13 3c3 4 3 10 0 14"/>
+    </svg>
+    Vôlei
+  </li>
+    <li>
+    <!-- Handebol -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M7 7l2-2 4 4-2 2zM6 11l-1 3 3 1 1-3zM11 6l3-1 1 3-3 1z"/>
+    </svg>
+    Handebol
+  </li>
+      </ul>
+    </aside>
+
+
+     <!-- card conteiner-->
+
+<div class="main-content">
+  <div class="live-cards-container">
+  <!-- Card 1 -->
+  <div class="live-card">
+    <img src="https://platform.bitterandblue.sbnation.com/wp-content/uploads/sites/29/chorus/uploads/chorus_asset/file/9580059/862512820.jpg?quality=90&strip=all&crop=4.7029702970297%2C0%2C90.594059405941%2C100&w=2400" alt="Manchester City vs Napoli">
+    <div class="card-content">
+      <div class="tempo">67:11</div>
+      <div class="times">
+        <span>Manchester City <strong>2</strong></span>
+        <span>Napoli <strong>0</strong></span>
+      </div>
+      <div class="odds">
+        <div class="odd-btn green">1<br>1.009</div>
+        <div class="odd-btn">X<br>25.00</div>
+        <div class="odd-btn green">2<br>35.00</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="live-card">
+    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=1280,height=720,quality=75,format=webp/uploads/2025/04/lewandowski-lamine-raphinha-1920x1565.jpeg" alt="Newcastle vs Barcelona">
+    <div class="card-content">
+      <div class="tempo">66:09</div>
+      <div class="times">
+        <span>Newcastle United <strong>0</strong></span>
+        <span>Barcelona <strong>2</strong></span>
+      </div>
+      <div class="odds">
+        <div class="odd-btn">1<br>32.00</div>
+        <div class="odd-btn">X<br>9.50</div>
+        <div class="odd-btn green">2<br>1.08</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="live-card">
+    <img src="https://media.eintracht.de/image/upload/ar_3:2,c_fill,dpr_3.0,f_auto,g_xy_center,q_60,w_400,x_w_mul_0.53,y_h_mul_0.43/v1758035737/galatasaray-team-jubel-0056">
+    <div class="card-content">
+      <div class="tempo">64:13</div>
+      <div class="times">
+        <span>Eintracht Frankfurt <strong>3</strong></span>
+        <span>Galatasaray <strong>1</strong></span>
+      </div>
+      <div class="odds">
+        <div class="odd-btn green">1<br>1.07</div>
+        <div class="odd-btn">X<br>10.00</div>
+        <div class="odd-btn green">2<br>35.00</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="painel-jogos">
+  <div class="painel-header">
+    <h2>Jogos ao Vivo</h2>
+    <div class="painel-filtros">
+      <button class="ativo">Highlights</button>
+      <button>Futebol</button>
+      <button>Tênis</button>
+      <button>Basquete</button>
+      <button>Vôlei</button>
+      <button>Esports</button>
+    </div>
+  </div>
+
+  <div class="painel-conteudo">
+  <div class="jogo">
+    <span class="liga">Brasil - Copa do Brasil</span>
+    <div class="times">
+      <span>Internacional</span>
+      <span>Fluminense</span>
+    </div>
+    <div class="odds">
+      <button>2.25</button>
+      <button>X 3.20</button>
+      <button>3.10</button>
+    </div>
+  </div>
+
+  <div class="jogo">
+    <span class="liga">Peru - Liga 1</span>
+    <div class="times">
+      <span>Atletico Grau</span>
+      <span>Alianza Universidad</span>
+    </div>
+    <div class="odds">
+      <button>1.28</button>
+      <button>X 4.60</button>
+      <button>13.00</button>
+    </div>
+  </div>
+
+  <div class="jogo">
+    <span class="liga">Inglaterra - Premier League</span>
+    <div class="times">
+      <span>Chelsea</span>
+      <span>Liverpool</span>
+    </div>
+    <div class="odds">
+      <button>2.80</button>
+      <button>X 3.40</button>
+      <button>2.50</button>
+    </div>
+  </div>
+
+  <div class="jogo">
+    <span class="liga">Espanha - La Liga</span>
+    <div class="times">
+      <span>Real Madrid</span>
+      <span>Sevilla</span>
+    </div>
+    <div class="odds">
+      <button>1.55</button>
+      <button>X 4.00</button>
+      <button>6.20</button>
+    </div>
+  </div>
+
+  <div class="jogo">
+    <span class="liga">Itália - Serie A</span>
+    <div class="times">
+      <span>Juventus</span>
+      <span>AC Milan</span>
+    </div>
+    <div class="odds">
+      <button>2.10</button>
+      <button>X 3.25</button>
+      <button>3.40</button>
+    </div>
+  </div>
+
+  <div class="jogo">
+    <span class="liga">Alemanha - Bundesliga</span>
+    <div class="times">
+      <span>Bayern de Munique</span>
+      <span>Borussia Dortmund</span>
+    </div>
+    <div class="odds">
+      <button>1.90</button>
+      <button>X 3.60</button>
+      <button>3.80</button>
+    </div>
+  </div>
+</div>
+
+
+
+    
+</body>
+</html>
+ 
+
+
+  <!-- Modal de Configurações -->
+  <div id="menu-princi" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Configurações</h2>
+      <div class="section">
+        <h3>Idioma</h3>
+        <div class="option" onclick="selectLanguage(this)">
+          <button>
+          <img src="https://flagcdn.com/w20/br.png" alt="BR"> Português (Brasil)</button>
+        </div>
+        <div class="option1" onclick="selectLanguage(this)">
+          <button>
+          <img src="https://flagcdn.com/w20/gb.png" alt="EN"> English
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Modal de pesquisa-->
+
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2>Pesquisa</h2>
+      <input type="text" id="searchInput" placeholder="Digite sua pesquisa...">
+      <button class="btn">Pesquisar</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+  function openModal() {
+    document.getElementById("menu-princi").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("menu-princi").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    let modal = document.getElementById("menu-princi");
+    if (event.target == modal) {
+      closeModal();
+    }
+  }
+
+  function selectLanguage(element) {
+    document.querySelectorAll('.option, .option1').forEach(opt => opt.classList.remove('selected'));
+    element.classList.add('selected');
+  }
+</script>
+
+<!--script pesquisa-->
+<script>
+
+const modal = document.getElementById("searchModal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+
+openModalBtn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+
+closeModalBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  <script src="./js/script.js" defer></script>
+
+   <footer>
+    © 2025 BUMBET. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
