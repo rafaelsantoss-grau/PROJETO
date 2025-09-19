@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #070307;
+}
+
+header {
+  background: linear-gradient(to right, #a216c5, #a1271f);
+  padding: 20px;
+  border-bottom: 0.5px solid #fdfdfd;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+header h1 {
+   font-family: 'Exo 2', sans-serif;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 48px;
+      background: linear-gradient(to right,#d86666a4, #9110b1, #d86666a4);
+       border-radius: 12px;
+      letter-spacing: -1px;
+      margin: 0;
+      margin-left: -6px ;
+      margin-top: -7px;
+      display: inline;
+}
+
+
+.menu-direito {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-direito .icon {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-direito .icon:hover {
+  opacity: 0.7;
+}
+
+.menu-direito a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 0.3px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.menu-direito a.registrar {
+  color: white;
+  background-color: transparent;
+}
+
+.menu-direito a.entrar {
+  background-color: #176939;
+  color: white;
+}
+
+.menu-direito a:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+  color: #030202;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+}
