@@ -127,7 +127,3 @@ Rafael
 
 📅 Data: 17/10/2025
 
-📜 Licença
-
-Este projeto foi desenvolvido apenas para fins educacionais e de portfólio.
-Não se trata de uma plataforma de apostas real.
